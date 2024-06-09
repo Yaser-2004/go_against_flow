@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#contents {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+#main {
+    position: relative;
+    width: 93%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+#main img {
+    position: absolute;
+    min-width: 100%;
+    align-self: center;
+    height: 100%;
+    opacity: 0.89;
+}
+
+#col-nav {
+    width: 7%;
+    height: 100%;
+    background-color: #fff4f0;
+}
+
+#go, #against, #flow {
+    margin-left: 3%;
+    display: flex;
+    font-size: 6.5vw;
+    line-height: 0.9;
+    color: #fff4f0;  
+}
+
+#go h1, #against h1, #flow h1 {
+    font-weight: 800;
+    transform: scaleY(1.15);
+    
+}
+
+#col-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+#col-nav div {
+    width: 100%;
+}
+
+#col-nav div:nth-child(1) {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#col-nav div:nth-child(2) {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+#col-nav div:nth-child(3) {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+#col-nav div:nth-child(4) {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#col-nav div:nth-child(5) {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu i:first-child {
+    position: relative;
+    cursor: pointer;
+}
+
+#menu i:last-child {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-container {
+    position: absolute;
+    width: 93%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* z-index: 2; */
+}
+
+.side-menu {
+    width: 0;
+    height: 100%;
+    background-color: #fff4f0;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.active {
+    width: 30%;
+}
+
+.active1 {
+    border-left: solid black 1px;
+}
+
+.up, .down {
+    display: none;
+    flex-direction: column;
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.up {
+    font-size: xx-large;
+    transition: all 0.2s ease-in-out;
+}
+
+.up p {
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.up p:first-child {
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+.down {
+    font-size: large;
+    margin-left: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.down p {
+    cursor: pointer;
+    border-bottom: solid rgb(78, 78, 78) 1px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.down p:hover, .up p:hover {
+    color: rgb(133, 133, 133);
+}
+
+.up P:first-child:hover {
+    color: black;
+}
+
+.down p:last-child {
+    border-bottom: none;
+}
+
+.down p:first-child {
+    border-top: solid rgb(78, 78, 78) 1px;
+}
+
+button {
+    position: absolute;
+    top: 85%;
+    left: 66%;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    mix-blend-mode: lighten;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    mix-blend-mode: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn {
+    z-index: -1;
+}
+
+/* #mobile-head {
+    display: none;
+    mix-blend-mode:lighten;
+} */
+
+@media (max-width: 1000px) and (min-width: 700px) {
+    #go, #against, #flow {
+        font-size: 8vw;  
+    }
+}
+
+@media (max-width: 700px) {
+
+    .active {
+        width: 100%;
+    }
+
+    #col-nav {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        width: 100%;
+        height: 7%;
+    }
+
+    #main {
+        width: 100%;
+        height: 93%;
+        display: flex;
+    
+    }
+
+    .menu-container {
+        display: flex;
+        width: 100%;
+        height: 93%;
+    }
+
+    #col-nav div:nth-child(1) {
+        height: 100%;
+        width: 10%;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    #col-nav div:nth-child(2) {
+        display: none;
+    }
+    #col-nav div:nth-child(3) {
+        display: none;
+    }
+    #col-nav div:nth-child(4) {
+        height: 100%;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #col-nav div:nth-child(5) {
+        height: 100%;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contents {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    #col-nav div {
+        height: 100%;
+    }
+
+    #go, #against, #flow {
+        margin-left: 3%;
+        display: flex;
+        font-size: xxx-large;
+        line-height: 0.9;
+        color: #fff4f0;  
+    }
+
+    #go h1, #against h1, #flow h1 {
+        font-weight: 900;
+    }
+
+    button {
+        position: absolute;
+        top: 85%;
+        left: 3%;
+        width: 180px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        color: black;
+        font-size: 30px;
+        font-weight: 800;
+        mix-blend-mode: lighten;
+    }
+}
+
+@media (max-width: 500px) {
+    #go, #against, #flow {
+        margin-left: 3%;
+        display: flex;
+        font-size: 10vw;
+        line-height: 0.9;
+        color: #fff4f0;  
+    }
+
+    #col-nav div:nth-child(1) {
+        width: 15%;
+    }
+    #col-nav div:nth-child(4) {
+        width: 15%;
+    }
+    #col-nav div:nth-child(5) {
+        width: 15%;
+    }
+}
+
+
+
